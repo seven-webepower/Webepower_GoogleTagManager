@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright © WebePower LLC. All rights reserved.
+ * See COPYING.txt for license details.
+ * http://www.webepower.biz | support@webepower.biz
+ */
+-->
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="after.body.start">
+          <block class="Webepower\GoogleTagManager\Block\GtmBlock" name="gtm.body" as="gtm.body" before="-" template="Webepower_GoogleTagManager::gtm_body.phtml" />
+        </referenceContainer>
+        <referenceBlock name="head.additional">
+            <block class="Webepower\GoogleTagManager\Block\GtmBlock" name="gtm.head" as="gtm.head" before="-" template="Webepower_GoogleTagManager::gtm_head.phtml" />
+        </referenceBlock>
+    </body>
+</page>
